@@ -1,5 +1,7 @@
 # NEXT.JS 15 Crash Course
 
+> Link to YT video: [Next.js 15 Crash Course](https://www.youtube.com/watch?v=###)
+
 This is a crash course on Next.js 15, covering the latest features and best practices for building modern web applications. The course includes hands-on examples and practical tips to help you get started quickly.
 
 ## Table of Contents
@@ -7,27 +9,7 @@ This is a crash course on Next.js 15, covering the latest features and best prac
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Project Structure](#project-structure)
-- [Routing](#routing)
-- - [Static Routes](#static-routes)
-- - [Dynamic Routes](#dynamic-routes)
-- - [Layout Routes](#layout-routes)
-- - [Nested Routes](#nested-routes)
-- - [API Routes](#api-routes)
-- [Navigating Between Pages](#navigating-between-pages)
-- - [Link Component](#link-component)
-- - [useRouter Hook](#userouter-hook)
-- [Server Vs Client Components](#server-vs-client-components)
-- - [Creating Server Components](#creating-server-components)
-- - [Creating Client Components](#creating-client-components)
-- [Server Actions](#server-actions)
-- - [Creating Server Actions](#creating-server-actions)
-- - [Testing Server Actions](#testing-server-actions)
-- - [Server Actions with Revalidation](#server-actions-with-revalidation)
-- [Conclusion](#conclusion)
-- [Resources](#resources)
-- [License](#license)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
+- [Crash Course Content](#crash-course-content)
 
 ## Introduction
 
@@ -71,3 +53,79 @@ npm run dev
 This will start the development server at `http://localhost:3000`. You can open this URL in your web browser to see your Next.js application in action.
 
 ## Project Structure
+
+Next.js has a specific project structure that helps organize your code and assets. Here is a brief overview of the main directories and files in a Next.js project:
+
+```
+my-next-app/
+├── public/                   # Static assets (images, etc.)
+├── src/
+│   ├── app/                  # Main application directory (Next.js App Router)
+│   │   ├── about/
+│   │   │   └── page.tsx      # About page (demo of useRouter)
+│   │   ├── api/
+│   │   │   └── users/
+│   │   │       └── route.ts  # API route handler for /api/users
+│   │   ├── products/         # Products page
+│   │   ├── [id]/             # Dynamic route for individual items
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── users/
+│   │   │   └── page.tsx      # Users page
+│   │   ├── favicon.ico       # App favicon
+│   │   ├── globals.css       # Global CSS styles
+│   │   ├── layout.tsx        # Root layout
+│   │   └── page.tsx          # Root page (e.g., Home)
+│   ├── components/           # Reusable UI components
+│   │   ├── ClientCounter.tsx
+│   │   ├── Navbar.tsx
+│   │   └── ServerMessage.tsx
+│   ├── types/                # Type definitions
+│   │   └── index.d.ts
+│   ├── .env                  # Environment variables
+├── .gitignore                # Git ignore rules
+├── eslint.config.mjs         # ESLint configuration
+├── next-env.d.ts             # Next.js environment typing
+└── next.config.ts            # Next.js configuration
+```
+
+### Directory Structure
+
+- `public/`: This directory contains static assets such as images, fonts, and other files that can be served directly to the client.
+- `src/`: This is the main application directory where most of your code will reside.
+  - `app/`: This directory contains the main application files, including pages, API routes, and layouts.
+  - `components/`: This directory contains reusable UI components that can be used throughout your application.
+  - `types/`: This directory contains type definitions for TypeScript projects.
+- `.gitignore`: This file specifies files and directories that should be ignored by Git.
+- `eslint.config.mjs`: This file contains the ESLint configuration for your project.
+- `next-env.d.ts`: This file contains type definitions for Next.js environment variables.
+- `next.config.ts`: This file contains the Next.js configuration for your project.
+- `.env`: This file contains environment variables for your project. You can create this file to store sensitive information such as API keys and database connection strings. It is recommended to add this file to your `.gitignore` to prevent it from being committed to version control.
+- `package.json`: This file contains the project metadata and dependencies. It is automatically generated when you create a new Next.js project using `create-next-app`.
+- `package-lock.json`: This file contains the exact version of each dependency installed in your project. It is automatically generated when you install or update dependencies using npm.
+- `tsconfig.json`: This file contains the TypeScript configuration for your project. It is automatically generated when you create a new Next.js project using `create-next-app` with TypeScript support.
+
+## Crash Course Content
+
+1. [Routing](#routing)
+   - [Static Routes](#)
+   - [Dynamic Routes](#)
+   - [Layout Routes](#)
+   - [Nested Routes](#)
+   - [API Routes](#)
+2. [Navigating Between Pages](#)
+   - [Link Component](#)
+   - [useRouter Hook](#)
+3. [Server Vs Client Components](#)
+   - [Creating Server Components](#)
+   - [Creating Client Components](#)
+4. [Server Actions](#)
+   - [Creating Server Actions](#)
+   - [Testing Server Actions](#)
+   - [Server Actions with Revalidation](#)
+5. [Data Fetching](#)
+   - [Static Site Generation (SSG)](#)
+   - [Server-Side Rendering (SSR)](#)
+   - [Client-Side Rendering (CSR)](#)
+   - [Incremental Static Regeneration (ISR)](#)
+   - [Static Generation with Client-Side Rendering (SG+CSR)](#)
